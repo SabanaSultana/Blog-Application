@@ -3,8 +3,6 @@ const bcrypt=require("bcrypt")
 //sign up
 exports.registerUser = async (req, res) => {
   try {
-  } catch (error) {}
-  try {
     const { username, email, password } = req.body;
     //validation
     if (!username || !email || !password) {

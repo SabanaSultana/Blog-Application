@@ -4,7 +4,7 @@ const { registerUser, login, getAllUsers } = require("../controllers/userControl
 const router=express.Router()
 
 //register user
-router.post('/signup',registerUser)
+router.post('/register',registerUser)
 
 //login user
 router.post('/login',login)
