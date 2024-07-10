@@ -40,7 +40,7 @@ const BlogDetails = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put(`/api/v1/blog/update-blog/${id}`, {
+      const { data } = await axios.put(`http://localhost:8080/api/v1/blog/update-blog/${id}`, {
         title: inputs.title,
         description: inputs.description,
         image: inputs.image,
@@ -89,7 +89,6 @@ const BlogDetails = () => {
             onChange={handleChange}
             margin="normal"
             variant="outlined"
-            required
           />
           <InputLabel
             sx={{ mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" }}
@@ -102,7 +101,6 @@ const BlogDetails = () => {
             onChange={handleChange}
             margin="normal"
             variant="outlined"
-            required
           />
           <InputLabel
             sx={{ mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" }}
@@ -115,7 +113,6 @@ const BlogDetails = () => {
             onChange={handleChange}
             margin="normal"
             variant="outlined"
-            required
           />
           <Button type="submit" color="warning" variant="contained">
             UPDATE
